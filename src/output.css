@@ -177,6 +177,9 @@
   }
 }
 @layer utilities {
+  .mx-1 {
+    margin-inline: calc(var(--spacing) * 1);
+  }
   .mx-6 {
     margin-inline: calc(var(--spacing) * 6);
   }
@@ -246,9 +249,6 @@
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
-  .w-6 {
-    width: calc(var(--spacing) * 6);
-  }
   .w-20 {
     width: calc(var(--spacing) * 20);
   }
@@ -279,20 +279,8 @@
   .flex-row {
     flex-direction: row;
   }
-  .content-center {
-    align-content: center;
-  }
   .items-center {
     align-items: center;
-  }
-  .items-center-safe {
-    align-items: safe center;
-  }
-  .items-start {
-    align-items: flex-start;
-  }
-  .items-stretch {
-    align-items: stretch;
   }
   .justify-between {
     justify-content: space-between;
@@ -312,28 +300,17 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
-  .truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
-  .overflow-auto {
-    overflow: auto;
-  }
-  .overflow-clip {
-    overflow: clip;
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
   }
   .overflow-hidden {
     overflow: hidden;
   }
-  .overflow-scroll {
-    overflow: scroll;
-  }
   .overflow-x-auto {
     overflow-x: auto;
-  }
-  .overflow-x-hidden {
-    overflow-x: hidden;
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
@@ -417,9 +394,6 @@
   .text-justify {
     text-align: justify;
   }
-  .text-left {
-    text-align: left;
-  }
   .align-middle {
     vertical-align: middle;
   }
@@ -435,10 +409,6 @@
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
   .text-balance {
     text-wrap: balance;
   }
@@ -447,12 +417,6 @@
   }
   .break-words {
     overflow-wrap: break-word;
-  }
-  .wrap-break-word {
-    overflow-wrap: break-word;
-  }
-  .overflow-ellipsis {
-    text-overflow: ellipsis;
   }
   .whitespace-nowrap {
     white-space: nowrap;
@@ -528,11 +492,6 @@
       justify-content: space-between;
     }
   }
-  .md\:gap-4 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 4);
-    }
-  }
   .md\:gap-50 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 50);
@@ -573,9 +532,9 @@
       padding-left: calc(var(--spacing) * 7);
     }
   }
-  .md\:text-center {
+  .md\:text-left {
     @media (width >= 48rem) {
-      text-align: center;
+      text-align: left;
     }
   }
   .md\:text-clip {
